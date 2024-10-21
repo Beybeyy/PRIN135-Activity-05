@@ -19,9 +19,40 @@ header {
     border-bottom: 4px solid #EAD8B1;
 }
 
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 footer {
     max-width: 1200px;
     margin: 0 auto;
     text-align: right;
     padding: 20px 50px;
+}
+
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        text-align: center;
+    }
 }
